@@ -1,0 +1,29 @@
+[project]
+name = "apiverve-vindecoder"
+version = "1.2.3"
+authors = [
+  { name="APIVerve", email="hello@apiverve.com" },
+]
+description = "VIN Decoder turns a 17-character Vehicle Identification Number into the vehicle it identifies. Returns make, model, year, trim, body class and manufacturer, plus engine specifications, plant of manufacture, and the safety equipment fitted to that specific build. Optionally adds every safety recall issued for that vehicle and its NHTSA 5-star crash-test rating."
+keywords = ["vin decoder api", "vin api", "nhtsa vin decoder api", "vin lookup api", "vin decoder"]
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "requests>=2.25.0"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Natural Language :: English",
+]
+
+[project.urls]
+Homepage = "https://apiverve.com/marketplace/vindecoder?utm_source=pypi&utm_medium=referral&utm_content=homepage"
+Documentation = "https://docs.apiverve.com/ref/vindecoder?utm_source=pypi&utm_medium=referral&utm_content=docs"
+Repository = "https://github.com/apiverve/vindecoder-api"
+Twitter = "https://twitter.com/apivervehq"
