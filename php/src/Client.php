@@ -15,7 +15,7 @@ use APIVerve\Vindecoder\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['vin' => '1HGCM82633A004352', 'recalls' => true, 'safetyRating' => true]);
+ * $response = $client->execute(['vin' => '1HGCM82633A004352', 'recalls' => true, 'safetyRating' => true, 'fuelEconomy' => true]);
  * print_r($response);
  * ```
  *
@@ -36,7 +36,8 @@ class Client
     private const VALIDATION_RULES = [
         'vin' => ['type' => 'string', 'required' => true, 'minLength' => 1, 'maxLength' => 17],
         'recalls' => ['type' => 'boolean', 'required' => false],
-        'safetyRating' => ['type' => 'boolean', 'required' => false]
+        'safetyRating' => ['type' => 'boolean', 'required' => false],
+        'fuelEconomy' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**

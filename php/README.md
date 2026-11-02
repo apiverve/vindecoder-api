@@ -30,7 +30,8 @@ $client = new Client('YOUR_API_KEY');
 $response = $client->execute([
     'vin' => '1HGCM82633A004352',
     'recalls' => true,
-    'safetyRating' => true
+    'safetyRating' => true,
+    'fuelEconomy' => true
 ]);
 
 // Print the response
@@ -46,7 +47,7 @@ use APIVerve\Vindecoder\Exceptions\APIException;
 use APIVerve\Vindecoder\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['vin' => '1HGCM82633A004352', 'recalls' => true, 'safetyRating' => true]);
+    $response = $client->execute(['vin' => '1HGCM82633A004352', 'recalls' => true, 'safetyRating' => true, 'fuelEconomy' => true]);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -261,6 +262,54 @@ $client = new Client(
         "forwardCollisionWarning": "notAvailable",
         "laneDepartureWarning": "notAvailable"
       }
+    },
+    "fuelEconomy": {
+      "unit": "MPG",
+      "city": {
+        "min": 19,
+        "max": 19,
+        "value": 19
+      },
+      "highway": {
+        "min": 27,
+        "max": 27,
+        "value": 27
+      },
+      "combined": {
+        "min": 22,
+        "max": 22,
+        "value": 22
+      },
+      "exact": true,
+      "variantsMatched": 1,
+      "electricRangeMiles": null,
+      "co2GramsPerMile": {
+        "min": 404,
+        "max": 404,
+        "value": 404
+      },
+      "annualFuelCostUsd": {
+        "min": 3050,
+        "max": 3050,
+        "value": 3050
+      },
+      "variants": [
+        {
+          "epaId": 18657,
+          "model": "Accord",
+          "vehicleClass": "Midsize Cars",
+          "powertrain": "Gasoline",
+          "fuelType": "Regular",
+          "displacementL": 3,
+          "cylinders": 6,
+          "drive": "Front-Wheel Drive",
+          "transmission": "Automatic 5-spd",
+          "cityMpg": 19,
+          "highwayMpg": 27,
+          "combinedMpg": 22,
+          "electricRangeMiles": null
+        }
+      ]
     }
   }
 }
