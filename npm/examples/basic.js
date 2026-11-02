@@ -17,7 +17,8 @@ const api = new vindecoderAPI({
 var query = {
   vin: "1HGCM82633A004352",
   recalls: true,
-  safetyRating: true
+  safetyRating: true,
+  fuelEconomy: true
 };
 
 // Make the API request using callback

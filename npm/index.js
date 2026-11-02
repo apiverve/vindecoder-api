@@ -30,7 +30,7 @@ class vindecoderWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/vindecoder';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"vin":{"type":"string","required":true,"minLength":1,"maxLength":17},"recalls":{"type":"boolean","required":false},"safetyRating":{"type":"boolean","required":false}};
+        this.validationRules = {"vin":{"type":"string","required":true,"minLength":1,"maxLength":17},"recalls":{"type":"boolean","required":false},"safetyRating":{"type":"boolean","required":false},"fuelEconomy":{"type":"boolean","required":false}};
     }
 
     /**

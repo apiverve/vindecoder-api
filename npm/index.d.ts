@@ -45,6 +45,7 @@ declare module '@apiverve/vindecoder' {
       validation:        Validation;
       recalls:           Recalls;
       safetyRating:      SafetyRating;
+      fuelEconomy:       FuelEconomy;
   }
   
   interface Engine {
@@ -82,6 +83,41 @@ declare module '@apiverve/vindecoder' {
       sideAirBagLocations:      null | string;
       curtainAirBagLocations:   null | string;
       frontAirBagLocations:     null | string;
+  }
+  
+  interface FuelEconomy {
+      unit:               null | string;
+      city:               AnnualFuelCostUsd;
+      highway:            AnnualFuelCostUsd;
+      combined:           AnnualFuelCostUsd;
+      exact:              boolean | null;
+      variantsMatched:    number | null;
+      electricRangeMiles: null;
+      co2GramsPerMile:    AnnualFuelCostUsd;
+      annualFuelCostUsd:  AnnualFuelCostUsd;
+      variants:           Variant[];
+  }
+  
+  interface AnnualFuelCostUsd {
+      min:   number | null;
+      max:   number | null;
+      value: number | null;
+  }
+  
+  interface Variant {
+      epaID:              number | null;
+      model:              null | string;
+      vehicleClass:       null | string;
+      powertrain:         null | string;
+      fuelType:           null | string;
+      displacementL:      number | null;
+      cylinders:          number | null;
+      drive:              null | string;
+      transmission:       null | string;
+      cityMpg:            number | null;
+      highwayMpg:         number | null;
+      combinedMpg:        number | null;
+      electricRangeMiles: null;
   }
   
   interface Plant {
