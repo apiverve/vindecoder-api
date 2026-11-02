@@ -17,7 +17,8 @@ async function callVINDecoderAPI() {
     const params &#x3D; new URLSearchParams({
             vin: &#x27;1HGCM82633A004352&#x27;,
             recalls: true,
-            safetyRating: true
+            safetyRating: true,
+            fuelEconomy: true
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

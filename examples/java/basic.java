@@ -17,6 +17,7 @@ public class BasicExample {
         parameters.put(&quot;vin&quot;, &quot;1HGCM82633A004352&quot;);
         parameters.put(&quot;recalls&quot;, true);
         parameters.put(&quot;safetyRating&quot;, true);
+        parameters.put(&quot;fuelEconomy&quot;, true);
 
             // Execute the API request
             APIResponse response = client.execute(parameters);

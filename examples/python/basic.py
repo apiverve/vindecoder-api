@@ -18,7 +18,7 @@ def call_vindecoder_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;vin&#x27;: &#x27;1HGCM82633A004352&#x27;, &#x27;recalls&#x27;: true, &#x27;safetyRating&#x27;: true}
+        params &#x3D; {&#x27;vin&#x27;: &#x27;1HGCM82633A004352&#x27;, &#x27;recalls&#x27;: true, &#x27;safetyRating&#x27;: true, &#x27;fuelEconomy&#x27;: true}
 
         headers = {
             'x-api-key': API_KEY
