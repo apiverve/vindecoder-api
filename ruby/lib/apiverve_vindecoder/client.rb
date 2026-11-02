@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Vindecoder::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ vin: "1HGCM82633A004352", recalls: true, safetyRating: true })
+    #   response = client.execute({ vin: "1HGCM82633A004352", recalls: true, safetyRating: true, fuelEconomy: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/vindecoder?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'vin' => { type: 'string', required: true, min_length: 1, max_length: 17 }, 'recalls' => { type: 'boolean', required: false }, 'safetyRating' => { type: 'boolean', required: false } }
+      VALIDATION_RULES = { 'vin' => { type: 'string', required: true, min_length: 1, max_length: 17 }, 'recalls' => { type: 'boolean', required: false }, 'safetyRating' => { type: 'boolean', required: false }, 'fuelEconomy' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
