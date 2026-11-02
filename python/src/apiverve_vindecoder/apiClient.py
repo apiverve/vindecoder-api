@@ -26,7 +26,8 @@ class VindecoderAPIClient:
     VALIDATION_RULES = {
         "vin": {"type": "string", "required": True, "minLength": 1, "maxLength": 17},
         "recalls": {"type": "boolean", "required": False},
-        "safetyRating": {"type": "boolean", "required": False}
+        "safetyRating": {"type": "boolean", "required": False},
+        "fuelEconomy": {"type": "boolean", "required": False}
     }
 
     # Format validation patterns
