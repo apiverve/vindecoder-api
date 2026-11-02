@@ -62,7 +62,8 @@ class Program
         var queryOptions = new VINDecoderQueryOptions {
             Vin = "1HGCM82633A004352",
             Recalls = true,
-            SafetyRating = true
+            SafetyRating = true,
+            FuelEconomy = true
         };
 
         // Make the API call
@@ -128,7 +129,8 @@ public class Example
         var queryOptions = new VINDecoderQueryOptions {
             Vin = "1HGCM82633A004352",
             Recalls = true,
-            SafetyRating = true
+            SafetyRating = true,
+            FuelEconomy = true
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -162,7 +164,8 @@ public class Example
         var queryOptions = new VINDecoderQueryOptions {
             Vin = "1HGCM82633A004352",
             Recalls = true,
-            SafetyRating = true
+            SafetyRating = true,
+            FuelEconomy = true
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -201,7 +204,8 @@ public class Example
         var queryOptions = new VINDecoderQueryOptions {
             Vin = "1HGCM82633A004352",
             Recalls = true,
-            SafetyRating = true
+            SafetyRating = true,
+            FuelEconomy = true
         };
 
         try
@@ -259,7 +263,8 @@ public class Example
         var queryOptions = new VINDecoderQueryOptions {
             Vin = "1HGCM82633A004352",
             Recalls = true,
-            SafetyRating = true
+            SafetyRating = true,
+            FuelEconomy = true
         };
 
         try
@@ -302,7 +307,8 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 var queryOptions = new VINDecoderQueryOptions {
     Vin = "1HGCM82633A004352",
     Recalls = true,
-    SafetyRating = true
+    SafetyRating = true,
+    FuelEconomy = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -330,7 +336,8 @@ apiClient.SetLogger(message =>
 var queryOptions = new VINDecoderQueryOptions {
     Vin = "1HGCM82633A004352",
     Recalls = true,
-    SafetyRating = true
+    SafetyRating = true,
+    FuelEconomy = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -350,7 +357,8 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 var queryOptions = new VINDecoderQueryOptions {
     Vin = "1HGCM82633A004352",
     Recalls = true,
-    SafetyRating = true
+    SafetyRating = true,
+    FuelEconomy = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -364,7 +372,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 var queryOptions = new VINDecoderQueryOptions {
     Vin = "1HGCM82633A004352",
     Recalls = true,
-    SafetyRating = true
+    SafetyRating = true,
+    FuelEconomy = true
 };
 
 using (var apiClient = new VINDecoderAPIClient("[YOUR_API_KEY]"))
@@ -572,6 +581,54 @@ using (var apiClient = new VINDecoderAPIClient("[YOUR_API_KEY]"))
         "forwardCollisionWarning": "notAvailable",
         "laneDepartureWarning": "notAvailable"
       }
+    },
+    "fuelEconomy": {
+      "unit": "MPG",
+      "city": {
+        "min": 19,
+        "max": 19,
+        "value": 19
+      },
+      "highway": {
+        "min": 27,
+        "max": 27,
+        "value": 27
+      },
+      "combined": {
+        "min": 22,
+        "max": 22,
+        "value": 22
+      },
+      "exact": true,
+      "variantsMatched": 1,
+      "electricRangeMiles": null,
+      "co2GramsPerMile": {
+        "min": 404,
+        "max": 404,
+        "value": 404
+      },
+      "annualFuelCostUsd": {
+        "min": 3050,
+        "max": 3050,
+        "value": 3050
+      },
+      "variants": [
+        {
+          "epaId": 18657,
+          "model": "Accord",
+          "vehicleClass": "Midsize Cars",
+          "powertrain": "Gasoline",
+          "fuelType": "Regular",
+          "displacementL": 3,
+          "cylinders": 6,
+          "drive": "Front-Wheel Drive",
+          "transmission": "Automatic 5-spd",
+          "cityMpg": 19,
+          "highwayMpg": 27,
+          "combinedMpg": 22,
+          "electricRangeMiles": null
+        }
+      ]
     }
   }
 }

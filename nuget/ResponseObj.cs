@@ -91,6 +91,9 @@ namespace APIVerve.API.VINDecoder
 
         [JsonProperty("safetyRating")]
         public SafetyRating SafetyRating { get; set; }
+
+        [JsonProperty("fuelEconomy")]
+        public FuelEconomy FuelEconomy { get; set; }
     }
 
     public partial class Engine
@@ -172,6 +175,93 @@ namespace APIVerve.API.VINDecoder
 
         [JsonProperty("frontAirBagLocations")]
         public string FrontAirBagLocations { get; set; }
+    }
+
+    public partial class FuelEconomy
+    {
+        [JsonProperty("unit")]
+        public string Unit { get; set; }
+
+        [JsonProperty("city")]
+        public AnnualFuelCostUsd City { get; set; }
+
+        [JsonProperty("highway")]
+        public AnnualFuelCostUsd Highway { get; set; }
+
+        [JsonProperty("combined")]
+        public AnnualFuelCostUsd Combined { get; set; }
+
+        [JsonProperty("exact")]
+        public bool? Exact { get; set; }
+
+        [JsonProperty("variantsMatched")]
+        public long? VariantsMatched { get; set; }
+
+        [JsonProperty("electricRangeMiles")]
+        public object ElectricRangeMiles { get; set; }
+
+        [JsonProperty("co2GramsPerMile")]
+        public AnnualFuelCostUsd Co2GramsPerMile { get; set; }
+
+        [JsonProperty("annualFuelCostUsd")]
+        public AnnualFuelCostUsd AnnualFuelCostUsd { get; set; }
+
+        [JsonProperty("variants")]
+        public Variant[] Variants { get; set; }
+    }
+
+    public partial class AnnualFuelCostUsd
+    {
+        [JsonProperty("min")]
+        public long? Min { get; set; }
+
+        [JsonProperty("max")]
+        public long? Max { get; set; }
+
+        [JsonProperty("value")]
+        public long? Value { get; set; }
+    }
+
+    public partial class Variant
+    {
+        [JsonProperty("epaId")]
+        public long? EpaId { get; set; }
+
+        [JsonProperty("model")]
+        public string Model { get; set; }
+
+        [JsonProperty("vehicleClass")]
+        public string VehicleClass { get; set; }
+
+        [JsonProperty("powertrain")]
+        public string Powertrain { get; set; }
+
+        [JsonProperty("fuelType")]
+        public string FuelType { get; set; }
+
+        [JsonProperty("displacementL")]
+        public long? DisplacementL { get; set; }
+
+        [JsonProperty("cylinders")]
+        public long? Cylinders { get; set; }
+
+        [JsonProperty("drive")]
+        public string Drive { get; set; }
+
+        [JsonProperty("transmission")]
+        public string Transmission { get; set; }
+
+        [JsonProperty("cityMpg")]
+        public long? CityMpg { get; set; }
+
+        [JsonProperty("highwayMpg")]
+        public long? HighwayMpg { get; set; }
+
+        [JsonProperty("combinedMpg")]
+        public long? CombinedMpg { get; set; }
+
+        [JsonProperty("electricRangeMiles")]
+        public object ElectricRangeMiles { get; set; }
     }
 
     public partial class Plant

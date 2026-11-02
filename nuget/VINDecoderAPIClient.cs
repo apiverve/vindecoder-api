@@ -69,7 +69,8 @@ namespace APIVerve.API.VINDecoder
         {
             { "vin", new ValidationRule { Type = "string", Required = true, MinLength = 1, MaxLength = 17 } },
             { "recalls", new ValidationRule { Type = "boolean", Required = false } },
-            { "safetyRating", new ValidationRule { Type = "boolean", Required = false } }
+            { "safetyRating", new ValidationRule { Type = "boolean", Required = false } },
+            { "fuelEconomy", new ValidationRule { Type = "boolean", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

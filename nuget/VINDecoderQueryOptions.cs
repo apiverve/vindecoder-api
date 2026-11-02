@@ -27,5 +27,11 @@ namespace APIVerve.API.VINDecoder
         /// </summary>
         [JsonProperty("safetyRating")]
         public bool? SafetyRating { get; set; }
+
+        /// <summary>
+        /// Add EPA fuel economy (city, highway and combined MPG, or MPGe for electric) for the matching versions of this vehicle.
+        /// </summary>
+        [JsonProperty("fuelEconomy")]
+        public bool? FuelEconomy { get; set; }
     }
 }
